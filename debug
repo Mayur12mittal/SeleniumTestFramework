@@ -1,0 +1,120 @@
+2024-05-23T08:05:05.424432300Z main DEBUG Apache Log4j Core 2.23 initializing configuration org.apache.logging.log4j.core.config.properties.PropertiesConfiguration@7577b641
+2024-05-23T08:05:05.424432300Z main DEBUG PluginManager 'Core' found 131 plugins
+2024-05-23T08:05:05.424432300Z main DEBUG PluginManager 'Level' found 0 plugins
+2024-05-23T08:05:05.424432300Z main DEBUG Building Plugin[name=property, class=org.apache.logging.log4j.core.config.Property].
+2024-05-23T08:05:05.440062900Z main DEBUG PluginManager 'TypeConverter' found 26 plugins
+2024-05-23T08:05:05.440062900Z main DEBUG createProperty(name="filename", value="target/logs/testexecution.log", Configuration(PropertiesConfig))
+2024-05-23T08:05:05.440062900Z main DEBUG Building Plugin[name=properties, class=org.apache.logging.log4j.core.config.PropertiesPlugin].
+2024-05-23T08:05:05.455683400Z main DEBUG configureSubstitutor(={filename=target/logs/testexecution.log}, Configuration(PropertiesConfig))
+2024-05-23T08:05:05.455683400Z main DEBUG PluginManager 'Lookup' found 16 plugins
+2024-05-23T08:05:05.455683400Z main DEBUG Building Plugin[name=logger, class=org.apache.logging.log4j.core.config.LoggerConfig].
+2024-05-23T08:05:05.455683400Z main DEBUG LoggerConfig$Builder(additivity="true", level="null", levelAndRefs="debug, RollingFile", name="Pages", includeLocation="null", ={}, ={}, Configuration(PropertiesConfig), Filter=null)
+2024-05-23T08:05:05.455683400Z main DEBUG Building Plugin[name=root, class=org.apache.logging.log4j.core.config.LoggerConfig$RootLogger].
+2024-05-23T08:05:05.455683400Z main DEBUG LoggerConfig$RootLogger$Builder(additivity="null", level="null", levelAndRefs="info, STDOUT", includeLocation="null", ={}, ={}, Configuration(PropertiesConfig), Filter=null)
+2024-05-23T08:05:05.455683400Z main DEBUG Building Plugin[name=loggers, class=org.apache.logging.log4j.core.config.LoggersPlugin].
+2024-05-23T08:05:05.455683400Z main DEBUG createLoggers(={Pages, root})
+2024-05-23T08:05:05.455683400Z main DEBUG Building Plugin[name=layout, class=org.apache.logging.log4j.core.layout.PatternLayout].
+2024-05-23T08:05:05.455683400Z main DEBUG PatternLayout$Builder(pattern="%d %p %C{1.} [%t] %m%n", PatternSelector=null, Configuration(PropertiesConfig), Replace=null, charset="null", alwaysWriteExceptions="null", disableAnsi="null", noConsoleNoAnsi="null", header="null", footer="null")
+2024-05-23T08:05:05.455683400Z main DEBUG PluginManager 'Converter' found 45 plugins
+2024-05-23T08:05:05.471309500Z main DEBUG Building Plugin[name=TimeBasedTriggeringPolicy, class=org.apache.logging.log4j.core.appender.rolling.TimeBasedTriggeringPolicy].
+2024-05-23T08:05:05.471309500Z main DEBUG TimeBasedTriggeringPolicy$Builder(interval="2", modulate="true", maxRandomDelay="null")
+2024-05-23T08:05:05.471309500Z main DEBUG Building Plugin[name=SizeBasedTriggeringPolicy, class=org.apache.logging.log4j.core.appender.rolling.SizeBasedTriggeringPolicy].
+2024-05-23T08:05:05.471309500Z main DEBUG createPolicy(size="100MB")
+2024-05-23T08:05:05.471309500Z main DEBUG Building Plugin[name=Policies, class=org.apache.logging.log4j.core.appender.rolling.CompositeTriggeringPolicy].
+2024-05-23T08:05:05.471309500Z main DEBUG createPolicy(={TimeBasedTriggeringPolicy(nextRolloverMillis=0, interval=2, modulate=true), SizeBasedTriggeringPolicy(size=104857600)})
+2024-05-23T08:05:05.471309500Z main DEBUG Building Plugin[name=DefaultRolloverStrategy, class=org.apache.logging.log4j.core.appender.rolling.DefaultRolloverStrategy].
+2024-05-23T08:05:05.471309500Z main DEBUG DefaultRolloverStrategy$Builder(max="5", min="null", fileIndex="null", compressionLevel="null", ={}, stopCustomActionsOnError="null", tempCompressedFilePattern="null", Configuration(PropertiesConfig))
+2024-05-23T08:05:05.471309500Z main DEBUG Building Plugin[name=appender, class=org.apache.logging.log4j.core.appender.RollingFileAppender].
+2024-05-23T08:05:05.486939Z main DEBUG RollingFileAppender$Builder(fileName="target/logs/testexecution.log", filePattern="target/rolling2/test1-%d{MM-dd-yy-HH-mm-ss}-%i.log.gz", append="null", locking="null", Policies(CompositeTriggeringPolicy(policies=[TimeBasedTriggeringPolicy(nextRolloverMillis=0, interval=2, modulate=true), SizeBasedTriggeringPolicy(size=104857600)])), DefaultRolloverStrategy(DefaultRolloverStrategy(min=1, max=5, useMax=true)), advertise="null", advertiseUri="null", createOnDemand="null", filePermissions="null", fileOwner="null", fileGroup="null", bufferedIo="null", bufferSize="null", immediateFlush="null", ignoreExceptions="null", PatternLayout(%d %p %C{1.} [%t] %m%n), name="RollingFile", Configuration(PropertiesConfig), Filter=null, ={})
+2024-05-23T08:05:05.486939Z main DEBUG Returning file creation time for C:\Users\I544182\IdeaProjects\SeleniumTestFramework\target\logs\testexecution.log
+2024-05-23T08:05:05.486939Z main DEBUG Starting RollingFileManager target/logs/testexecution.log
+2024-05-23T08:05:05.486939Z main DEBUG PluginManager 'FileConverter' found 2 plugins
+2024-05-23T08:05:05.486939Z main DEBUG Setting prev file time to 2024-05-23T13:33:16.597+0530
+2024-05-23T08:05:05.486939Z main DEBUG Initializing triggering policy CompositeTriggeringPolicy(policies=[TimeBasedTriggeringPolicy(nextRolloverMillis=0, interval=2, modulate=true), SizeBasedTriggeringPolicy(size=104857600)])
+2024-05-23T08:05:05.486939Z main DEBUG Initializing triggering policy TimeBasedTriggeringPolicy(nextRolloverMillis=0, interval=2, modulate=true)
+2024-05-23T08:05:05.486939Z main DEBUG Initializing triggering policy SizeBasedTriggeringPolicy(size=104857600)
+2024-05-23T08:05:05.486939Z main DEBUG Building Plugin[name=filter, class=org.apache.logging.log4j.core.filter.ThresholdFilter].
+2024-05-23T08:05:05.502560Z main DEBUG createFilter(level="DEBUG", onMatch="null", onMismatch="null")
+2024-05-23T08:05:05.502560Z main DEBUG Building Plugin[name=layout, class=org.apache.logging.log4j.core.layout.PatternLayout].
+2024-05-23T08:05:05.502560Z main DEBUG PatternLayout$Builder(pattern="%m%n", PatternSelector=null, Configuration(PropertiesConfig), Replace=null, charset="null", alwaysWriteExceptions="null", disableAnsi="null", noConsoleNoAnsi="null", header="null", footer="null")
+2024-05-23T08:05:05.502560Z main DEBUG Building Plugin[name=appender, class=org.apache.logging.log4j.core.appender.ConsoleAppender].
+2024-05-23T08:05:05.502560Z main DEBUG ConsoleAppender$Builder(target="null", follow="null", direct="null", bufferedIo="null", bufferSize="null", immediateFlush="null", ignoreExceptions="null", PatternLayout(%m%n), name="STDOUT", Configuration(PropertiesConfig), ThresholdFilter(DEBUG), ={})
+2024-05-23T08:05:05.502560Z main DEBUG Starting OutputStreamManager SYSTEM_OUT.false.false
+2024-05-23T08:05:05.502560Z main DEBUG Building Plugin[name=appenders, class=org.apache.logging.log4j.core.config.AppendersPlugin].
+2024-05-23T08:05:05.502560Z main DEBUG createAppenders(={RollingFile, STDOUT})
+2024-05-23T08:05:05.502560Z main DEBUG Building Plugin[name=filter, class=org.apache.logging.log4j.core.filter.ThresholdFilter].
+2024-05-23T08:05:05.502560Z main DEBUG createFilter(level="DEBUG", onMatch="null", onMismatch="null")
+2024-05-23T08:05:05.502560Z main DEBUG Configuration org.apache.logging.log4j.core.config.properties.PropertiesConfiguration@7577b641 initialized
+2024-05-23T08:05:05.502560Z main DEBUG Starting configuration org.apache.logging.log4j.core.config.properties.PropertiesConfiguration@7577b641
+2024-05-23T08:05:05.502560Z main DEBUG Started configuration org.apache.logging.log4j.core.config.properties.PropertiesConfiguration@7577b641 OK.
+2024-05-23T08:05:05.502560Z main DEBUG Shutting down OutputStreamManager SYSTEM_OUT.false.false-1
+2024-05-23T08:05:05.502560Z main DEBUG OutputStream closed
+2024-05-23T08:05:05.502560Z main DEBUG Shut down OutputStreamManager SYSTEM_OUT.false.false-1, all resources released: true
+2024-05-23T08:05:05.502560Z main DEBUG Appender DefaultConsole-1 stopped with status true
+2024-05-23T08:05:05.502560Z main DEBUG Stopped org.apache.logging.log4j.core.config.DefaultConfiguration@76a82f33 OK
+2024-05-23T08:05:05.581084900Z main DEBUG Registering MBean org.apache.logging.log4j2:type=76ed5528
+2024-05-23T08:05:05.581084900Z main DEBUG Registering MBean org.apache.logging.log4j2:type=76ed5528,component=StatusLogger
+2024-05-23T08:05:05.581084900Z main DEBUG Registering MBean org.apache.logging.log4j2:type=76ed5528,component=ContextSelector
+2024-05-23T08:05:05.581084900Z main DEBUG Registering MBean org.apache.logging.log4j2:type=76ed5528,component=Loggers,name=Pages
+2024-05-23T08:05:05.581084900Z main DEBUG Registering MBean org.apache.logging.log4j2:type=76ed5528,component=Loggers,name=
+2024-05-23T08:05:05.581084900Z main DEBUG Registering MBean org.apache.logging.log4j2:type=76ed5528,component=Appenders,name=STDOUT
+2024-05-23T08:05:05.581084900Z main DEBUG Registering MBean org.apache.logging.log4j2:type=76ed5528,component=Appenders,name=RollingFile
+2024-05-23T08:05:05.581084900Z main DEBUG org.apache.logging.log4j.core.util.SystemClock supports precise timestamps.
+2024-05-23T08:05:05.581084900Z main DEBUG Reconfiguration complete for context[name=76ed5528] at URI C:\Users\I544182\IdeaProjects\SeleniumTestFramework\target\classes\log4j2.properties (org.apache.logging.log4j.core.LoggerContext@70325d20) with optional ClassLoader: null
+2024-05-23T08:05:05.581084900Z main DEBUG Shutdown hook enabled. Registering a new one.
+2024-05-23T08:05:05.581084900Z main DEBUG LoggerContext[name=76ed5528, org.apache.logging.log4j.core.LoggerContext@70325d20] started OK.
+2024-05-23T08:05:08.615107500Z main DEBUG Formatting file name. useCurrentTime=false. currentFileTime=1716451508615, prevFileTime=1716451397000
+2024-05-23T08:05:08.615107500Z main DEBUG Current file: target/logs/testexecution.log
+2024-05-23T08:05:08.615107500Z main DEBUG Eligible files: {}
+2024-05-23T08:05:08.615107500Z main DEBUG Formatting file name. useCurrentTime=false. currentFileTime=1716451508615, prevFileTime=1716451397000
+2024-05-23T08:05:08.624716500Z main DEBUG OutputStream closed
+2024-05-23T08:05:08.624716500Z main DEBUG RollingFileManager executing synchronous FileRenameAction[target\logs\testexecution.log to target\rolling2\test1-05-23-24-13-33-17-1.log, renameEmptyFiles=false]
+2024-05-23T08:05:08.624716500Z main DEBUG RollingFileManager executing async GzCompressAction[target\rolling2\test1-05-23-24-13-33-17-1.log to target\rolling2\test1-05-23-24-13-33-17-1.log.gz, deleteSource=true]
+2024-05-23T08:05:08.624716500Z main DEBUG Now writing to target/logs/testexecution.log at 2024-05-23T13:35:08.624+0530
+2024-05-23T08:05:10.701842200Z main DEBUG Formatting file name. useCurrentTime=false. currentFileTime=1716451510701, prevFileTime=1716451509000
+2024-05-23T08:05:10.701842200Z main DEBUG Current file: target/logs/testexecution.log
+2024-05-23T08:05:10.701842200Z main DEBUG Eligible files: {}
+2024-05-23T08:05:10.701842200Z main DEBUG Formatting file name. useCurrentTime=false. currentFileTime=1716451510701, prevFileTime=1716451509000
+2024-05-23T08:05:10.701842200Z main DEBUG OutputStream closed
+2024-05-23T08:05:10.701842200Z main DEBUG RollingFileManager executing synchronous FileRenameAction[target\logs\testexecution.log to target\rolling2\test1-05-23-24-13-35-09-1.log, renameEmptyFiles=false]
+2024-05-23T08:05:10.701842200Z main DEBUG RollingFileManager executing async GzCompressAction[target\rolling2\test1-05-23-24-13-35-09-1.log to target\rolling2\test1-05-23-24-13-35-09-1.log.gz, deleteSource=true]
+2024-05-23T08:05:10.701842200Z main DEBUG Now writing to target/logs/testexecution.log at 2024-05-23T13:35:10.701+0530
+2024-05-23T08:05:14.145334400Z main DEBUG Formatting file name. useCurrentTime=false. currentFileTime=1716451514145, prevFileTime=1716451511000
+2024-05-23T08:05:14.145334400Z main DEBUG Current file: target/logs/testexecution.log
+2024-05-23T08:05:14.145334400Z main DEBUG Eligible files: {}
+2024-05-23T08:05:14.145334400Z main DEBUG Formatting file name. useCurrentTime=false. currentFileTime=1716451514145, prevFileTime=1716451511000
+2024-05-23T08:05:14.145334400Z main DEBUG OutputStream closed
+2024-05-23T08:05:14.145334400Z main DEBUG RollingFileManager executing synchronous FileRenameAction[target\logs\testexecution.log to target\rolling2\test1-05-23-24-13-35-11-1.log, renameEmptyFiles=false]
+2024-05-23T08:05:14.145334400Z main DEBUG RollingFileManager executing async GzCompressAction[target\rolling2\test1-05-23-24-13-35-11-1.log to target\rolling2\test1-05-23-24-13-35-11-1.log.gz, deleteSource=true]
+2024-05-23T08:05:14.145334400Z main DEBUG Now writing to target/logs/testexecution.log at 2024-05-23T13:35:14.145+0530
+2024-05-23T08:05:16.392021700Z main DEBUG Formatting file name. useCurrentTime=false. currentFileTime=1716451516392, prevFileTime=1716451515000
+2024-05-23T08:05:16.392021700Z main DEBUG Current file: target/logs/testexecution.log
+2024-05-23T08:05:16.392021700Z main DEBUG Eligible files: {}
+2024-05-23T08:05:16.392021700Z main DEBUG Formatting file name. useCurrentTime=false. currentFileTime=1716451516392, prevFileTime=1716451515000
+2024-05-23T08:05:16.392021700Z main DEBUG OutputStream closed
+2024-05-23T08:05:16.392021700Z main DEBUG RollingFileManager executing synchronous FileRenameAction[target\logs\testexecution.log to target\rolling2\test1-05-23-24-13-35-15-1.log, renameEmptyFiles=false]
+2024-05-23T08:05:16.392021700Z main DEBUG RollingFileManager executing async GzCompressAction[target\rolling2\test1-05-23-24-13-35-15-1.log to target\rolling2\test1-05-23-24-13-35-15-1.log.gz, deleteSource=true]
+2024-05-23T08:05:16.392021700Z main DEBUG Now writing to target/logs/testexecution.log at 2024-05-23T13:35:16.392+0530
+2024-05-23T08:05:20.020783500Z main DEBUG Formatting file name. useCurrentTime=false. currentFileTime=1716451520020, prevFileTime=1716451517000
+2024-05-23T08:05:20.020783500Z main DEBUG Current file: target/logs/testexecution.log
+2024-05-23T08:05:20.020783500Z main DEBUG Eligible files: {}
+2024-05-23T08:05:20.020783500Z main DEBUG Formatting file name. useCurrentTime=false. currentFileTime=1716451520020, prevFileTime=1716451517000
+2024-05-23T08:05:20.020783500Z main DEBUG OutputStream closed
+2024-05-23T08:05:20.020783500Z main DEBUG RollingFileManager executing synchronous FileRenameAction[target\logs\testexecution.log to target\rolling2\test1-05-23-24-13-35-17-1.log, renameEmptyFiles=false]
+2024-05-23T08:05:20.020783500Z main DEBUG RollingFileManager executing async GzCompressAction[target\rolling2\test1-05-23-24-13-35-17-1.log to target\rolling2\test1-05-23-24-13-35-17-1.log.gz, deleteSource=true]
+2024-05-23T08:05:20.020783500Z main DEBUG Now writing to target/logs/testexecution.log at 2024-05-23T13:35:20.020+0530
+2024-05-23T08:05:25.257575100Z pool-1-thread-1 DEBUG Stopping LoggerContext[name=76ed5528, org.apache.logging.log4j.core.LoggerContext@70325d20]
+2024-05-23T08:05:25.257575100Z pool-1-thread-1 DEBUG Stopping LoggerContext[name=76ed5528, org.apache.logging.log4j.core.LoggerContext@70325d20]...
+2024-05-23T08:05:25.257575100Z pool-1-thread-1 DEBUG Shutting down RollingFileManager target/logs/testexecution.log
+2024-05-23T08:05:25.257575100Z pool-1-thread-1 DEBUG Shutting down RollingFileManager target/logs/testexecution.log
+2024-05-23T08:05:25.273214700Z pool-1-thread-1 DEBUG OutputStream closed
+2024-05-23T08:05:25.273214700Z pool-1-thread-1 DEBUG All asynchronous threads have terminated
+2024-05-23T08:05:25.273214700Z pool-1-thread-1 DEBUG RollingFileManager shutdown completed with status true
+2024-05-23T08:05:25.273214700Z pool-1-thread-1 DEBUG Shut down RollingFileManager target/logs/testexecution.log, all resources released: true
+2024-05-23T08:05:25.273214700Z pool-1-thread-1 DEBUG Appender RollingFile stopped with status true
+2024-05-23T08:05:25.273214700Z pool-1-thread-1 DEBUG Shutting down OutputStreamManager SYSTEM_OUT.false.false
+2024-05-23T08:05:25.273214700Z pool-1-thread-1 DEBUG OutputStream closed
+2024-05-23T08:05:25.273214700Z pool-1-thread-1 DEBUG Shut down OutputStreamManager SYSTEM_OUT.false.false, all resources released: true
+2024-05-23T08:05:25.273214700Z pool-1-thread-1 DEBUG Appender STDOUT stopped with status true
+2024-05-23T08:05:25.273214700Z pool-1-thread-1 DEBUG Stopped org.apache.logging.log4j.core.config.properties.PropertiesConfiguration@7577b641 OK
+2024-05-23T08:05:25.273214700Z pool-1-thread-1 DEBUG Stopped LoggerContext[name=76ed5528, org.apache.logging.log4j.core.LoggerContext@70325d20] with status true
