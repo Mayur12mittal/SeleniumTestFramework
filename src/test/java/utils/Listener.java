@@ -1,6 +1,8 @@
 package utils;
 
+import Config.BaseSetup;
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
@@ -33,13 +35,22 @@ public class Listener extends ExtentReport implements ITestListener {
     public void onTestFailure(ITestResult result) {
         System.out.println("Test Case " + result.getName() + " Failed...");
         test = reports.createTest(result.getName());
+        test.info("Test Case " + result.getName() + " Failed...");
         test.log(Status.FAIL, MarkupHelper.createLabel("Failed test case: "+result.getName(), ExtentColor.RED));
+
+        //Adding screenshot
+        String screenshotPath = captureScreenshot(BaseSetup.getDriver(), "Test_Failure_"+result.getName());
+        if (screenshotPath != null) {
+            test.fail("Test Failed.. Check Screenshot",
+                    MediaEntityBuilder.createScreenCaptureFromPath(screenshotPath).build());
+        }
     }
 
     @Override
     public void onTestSkipped(ITestResult result) {
         System.out.println("Test Case " + result.getName() + " Skipped...");
         test = reports.createTest(result.getName());
+        test.info("Test Case " + result.getName() + " Skipped...");
         test.log(Status.SKIP, MarkupHelper.createLabel("Skipped test case: "+result.getName(), ExtentColor.YELLOW));
     }
 
@@ -52,6 +63,7 @@ public class Listener extends ExtentReport implements ITestListener {
     public void onTestSuccess(ITestResult result) {
         System.out.println("Test Case " + result.getName() + " Passed...");
         test = reports.createTest(result.getName());
+        test.info("Test Case " + result.getName() + " Passed...");
         test.log(Status.PASS, MarkupHelper.createLabel("Passed test case: "+result.getName(), ExtentColor.GREEN));
     }
 

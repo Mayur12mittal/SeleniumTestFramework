@@ -6,11 +6,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import utils.Log;
 
 public class CuraLoginPage {
 
     WebDriver driver = null;
-    private static Logger logger = LogManager.getLogger(CuraLoginPage.class);
 
     public CuraLoginPage(WebDriver driver){
         this.driver = driver;
@@ -29,17 +29,17 @@ public class CuraLoginPage {
     //Method Implementations
 
     public void enterUserName(String id){
-        logger.info("Entering Username");
+        Log.info("Entering Username");
         userNameInputField.sendKeys(id);
     }
 
     public void enterPassword(String pass){
-        logger.info("Entering Password");
+        Log.info("Entering Password");
         passwordInputField.sendKeys(pass);
     }
 
     public void clickOnLogin(){
-        logger.info("Click on Login Button");
+        Log.info("Click on Login Button");
         loginBtnOnLoginPage.click();
     }
 }
